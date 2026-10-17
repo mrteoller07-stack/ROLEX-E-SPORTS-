@@ -3,147 +3,406 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ROLEX TOURNAMENT</title>
+<meta name="theme-color" content="#080808">
+
+<title>ROLEX TOURNAMENT | Free Fire MAX</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-    font-family:Arial,sans-serif;
-    background:#070b08;
-    color:white;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
-    text-align:center;
-    padding:30px 15px;
-    background:linear-gradient(135deg,#18251a,#000);
-    border-bottom:2px solid #d4af37;
+:root {
+    --gold: #ffd166;
+    --gold-dark: #c99524;
+    --black: #080808;
+    --card: #141414;
+    --white: #ffffff;
+    --muted: #b8b8b8;
 }
 
-.logo{
-    font-size:38px;
-    font-weight:900;
-    color:#d4af37;
-    letter-spacing:5px;
+html {
+    scroll-behavior: smooth;
 }
 
-header p{margin-top:10px;color:#ddd}
-
-.badge{
-    display:inline-block;
-    margin-top:15px;
-    background:#d4af37;
-    color:#000;
-    padding:9px 16px;
-    border-radius:25px;
-    font-weight:bold;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.6;
 }
 
-.container{
-    width:92%;
-    max-width:800px;
-    margin:25px auto;
+header {
+    padding: 16px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #35280b;
+    background: #090909;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.heading{
-    text-align:center;
-    color:#d4af37;
-    margin:30px 0 20px;
+.logo {
+    color: var(--gold);
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
-.card{
-    background:#111813;
-    border:1px solid #354638;
-    border-radius:15px;
-    padding:20px;
-    margin-bottom:22px;
-    box-shadow:0 5px 20px #0008;
+.logo span {
+    color: white;
 }
 
-.card h2{color:#d4af37;margin-bottom:15px}
-
-.info{
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-    padding:12px 0;
-    border-bottom:1px solid #29352c;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 13px;
 }
 
-.info span{color:#bbb}
-.info strong{color:white;text-align:right}
-
-.prize{
-    background:#1c281e;
-    border-radius:10px;
-    padding:13px;
-    margin-top:10px;
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
+nav a:hover {
+    color: var(--gold);
 }
 
-.prize strong{color:#d4af37}
-
-form{display:grid;gap:13px;margin-top:18px}
-
-label{color:#ddd;font-size:14px}
-
-input,select{
-    width:100%;
-    padding:14px;
-    border-radius:8px;
-    font-size:15px;
-    background:#080d09;
-    color:white;
-    border:1px solid #435447;
+.hero {
+    text-align: center;
+    padding: 75px 18px 65px;
+    background:
+        radial-gradient(ellipse at top, #48350e, #17120a 35%, #080808 75%);
 }
 
-select option{background:#111813}
-
-button{
-    width:100%;
-    padding:15px;
-    border-radius:8px;
-    background:#d4af37;
-    color:#000;
-    border:none;
-    font-size:15px;
-    font-weight:bold;
-    cursor:pointer;
+.badge {
+    display: inline-block;
+    border: 1px solid var(--gold-dark);
+    color: var(--gold);
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
 }
 
-button:hover{background:#f2d568}
-
-.note{
-    font-size:12px;
-    color:#aaa;
-    line-height:1.6;
-    margin-top:12px;
+.hero h1 {
+    font-size: clamp(40px, 8vw, 76px);
+    line-height: 1.12;
+    color: var(--gold);
+    letter-spacing: 2px;
 }
 
-.schedule-title{
-    color:#d4af37;
-    margin-top:23px;
-    margin-bottom:5px;
+.hero h2 {
+    font-size: 20px;
+    margin-top: 12px;
 }
 
-footer{
-    text-align:center;
-    padding:25px 12px;
-    margin-top:35px;
-    background:#101610;
-    color:#aaa;
-    border-top:1px solid #354638;
+.hero p {
+    color: var(--muted);
+    max-width: 560px;
+    margin: 15px auto 25px;
+    font-size: 14px;
 }
 
-footer strong{color:#d4af37}
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffe6a0, #c99524);
+    color: #080808;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 13px;
+}
 
-@media(max-width:450px){
-    .logo{font-size:30px}
-    .card{padding:16px}
-    .info{font-size:14px}
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+section {
+    padding: 55px 6%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 29px;
+    color: var(--gold);
+}
+
+.section-title p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: linear-gradient(145deg, #191919, #0e0e0e);
+    border: 1px solid #413315;
+    border-radius: 14px;
+    padding: 25px 20px;
+    transition: 0.25s;
+}
+
+.card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.card-icon {
+    font-size: 34px;
+}
+
+.card h3 {
+    color: var(--gold);
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 29px;
+    font-weight: 900;
+    margin: 12px 0;
+}
+
+.price small {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.card ul {
+    list-style: none;
+    margin: 15px 0 20px;
+}
+
+.card li {
+    padding: 7px 0;
+    border-bottom: 1px solid #262626;
+    color: #ddd;
+    font-size: 13px;
+}
+
+.card li::before {
+    content: "✦ ";
+    color: var(--gold);
+}
+
+.card .btn {
+    width: 100%;
+}
+
+.schedule {
+    background: #101010;
+}
+
+.table-wrap {
+    max-width: 900px;
+    margin: auto;
+    overflow-x: auto;
+    border: 1px solid #392b0c;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #292929;
+    font-size: 13px;
+}
+
+th {
+    color: var(--gold);
+    background: #19150c;
+}
+
+td {
+    color: #eee;
+}
+
+.register-section {
+    background: radial-gradient(ellipse at center, #251b08, #080808 75%);
+}
+
+.form-box {
+    max-width: 540px;
+    margin: auto;
+    padding: 28px;
+    border: 1px solid var(--gold-dark);
+    background: #111;
+    border-radius: 14px;
+}
+
+.form-box h3 {
+    color: var(--gold);
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.form-box > p {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin: 15px 0 6px;
+    color: #eee;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    border-radius: 7px;
+    background: #1c1c1c;
+    border: 1px solid #393939;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    border-color: var(--gold);
+}
+
+select option {
+    background: #111;
+}
+
+.form-box button {
+    width: 100%;
+    margin-top: 22px;
+}
+
+.helper {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+.notice {
+    background: #19150b;
+    color: #e8d7a8;
+    border: 1px solid #493817;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 12px;
+    margin-top: 17px;
+}
+
+.rules {
+    max-width: 750px;
+    margin: auto;
+    display: grid;
+    gap: 12px;
+}
+
+.rule {
+    padding: 15px;
+    border: 1px solid #292929;
+    background: #121212;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #ddd;
+}
+
+.rule strong {
+    color: var(--gold);
+}
+
+footer {
+    text-align: center;
+    padding: 28px 15px;
+    border-top: 1px solid #392b0c;
+    background: #050505;
+    color: #aaa;
+    font-size: 12px;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    background: #25d366;
+    color: #07140a;
+    border-radius: 30px;
+    padding: 12px 17px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    z-index: 20;
+    box-shadow: 0 4px 18px #0008;
+}
+
+@media (max-width: 800px) {
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+
+    header {
+        padding: 14px 5%;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 11px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 42px 5%;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .form-box {
+        padding: 22px 17px;
+    }
+}
+
+@media (max-width: 380px) {
+    header {
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
 }
 </style>
 </head>
@@ -151,181 +410,464 @@ footer strong{color:#d4af37}
 <body>
 
 <header>
-    <div class="logo">👑 ROLEX</div>
-    <p>FREE FIRE MAX TOURNAMENT</p>
-    <div class="badge">PLAY • COMPETE • WIN</div>
+    <div class="logo">ROLEX <span>TOURNAMENT</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#matches">Matches</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#register">Register</a>
+    </nav>
 </header>
 
-<main class="container">
+<main>
 
-<h1 class="heading">🏆 TOURNAMENT ARENA</h1>
+<section class="hero" id="home">
+    <div class="badge">FREE FIRE MAX • DAILY TOURNAMENTS</div>
 
-<section class="card">
-    <h2>🔥 BR SOLO</h2>
+    <h1>ROLEX<br>TOURNAMENT</h1>
 
-    <div class="info">
-        <span>Entry Fee</span>
-        <strong>₹10 / Player</strong>
-    </div>
+    <h2>🔥 Play Hard. Win Big. 🔥</h2>
 
-    <div class="info">
-        <span>Daily Matches</span>
-        <strong>2 Matches</strong>
-    </div>
-
-    <div class="prize">
-        <span>🥇 Booyah Winner</span>
-        <strong>₹100</strong>
-    </div>
-
-    <div class="prize">
-        <span>💀 Per Kill Reward</span>
-        <strong>₹3 / Kill</strong>
-    </div>
-</section>
-
-<section class="card">
-    <h2>⚔️ CLASH SQUAD</h2>
-
-    <div class="info">
-        <span>Entry Fee</span>
-        <strong>₹10 / Player</strong>
-    </div>
-
-    <div class="info">
-        <span>Prize Pool</span>
-        <strong>₹60 / Match</strong>
-    </div>
-
-    <div class="info">
-        <span>Daily Matches</span>
-        <strong>2 Matches</strong>
-    </div>
-</section>
-
-<section class="card">
-    <h2>🐺 LONE WOLF 1v1</h2>
-
-    <div class="info">
-        <span>Entry Fee</span>
-        <strong>₹20 / Player</strong>
-    </div>
-
-    <div class="info">
-        <span>Winner Prize</span>
-        <strong>₹30</strong>
-    </div>
-
-    <div class="info">
-        <span>Daily Matches</span>
-        <strong>5 Matches</strong>
-    </div>
-</section>
-
-<section class="card">
-    <h2>📅 OFFICIAL MATCH SCHEDULE</h2>
-    <p class="note">DAILY MATCH TIMINGS • INDIA TIME (IST)</p>
-
-    <h3 class="schedule-title">🔥 BR SOLO</h3>
-    <div class="info"><span>Match 1</span><strong>3:00 PM</strong></div>
-    <div class="info"><span>Match 2</span><strong>3:30 PM</strong></div>
-
-    <h3 class="schedule-title">⚔️ CLASH SQUAD</h3>
-    <div class="info"><span>Match 1</span><strong>4:00 PM</strong></div>
-    <div class="info"><span>Match 2</span><strong>4:30 PM</strong></div>
-
-    <h3 class="schedule-title">🐺 LONE WOLF 1v1</h3>
-    <div class="info"><span>Match 1</span><strong>5:00 PM</strong></div>
-    <div class="info"><span>Match 2</span><strong>5:10 PM</strong></div>
-    <div class="info"><span>Match 3</span><strong>5:20 PM</strong></div>
-    <div class="info"><span>Match 4</span><strong>5:30 PM</strong></div>
-    <div class="info"><span>Match 5</span><strong>5:40 PM</strong></div>
-</section>
-
-<section class="card">
-    <h2>📲 REGISTER FOR ROLEX</h2>
-
-    <p class="note">
-        Apna Player Name, Free Fire UID aur Tournament select karo.
-        Registration request WhatsApp par bhejo.
+    <p>
+        Enter the arena, show your skills and compete for rewards.
+        Choose your tournament and preferred match time!
     </p>
 
-    <form id="registrationForm">
+    <a href="#matches" class="btn">EXPLORE TOURNAMENTS</a>
+</section>
 
-        <label for="player">Player Name</label>
-        <input
-            id="player"
-            name="player"
-            type="text"
-            placeholder="Enter Player Name"
-            required
-        >
+<section id="matches">
+    <div class="section-title">
+        <h2>🏆 OUR TOURNAMENTS</h2>
+        <p>Choose your game mode and challenge the competition.</p>
+    </div>
 
-        <label for="uid">Free Fire UID</label>
-        <input
-            id="uid"
-            name="uid"
-            type="text"
-            inputmode="numeric"
-            placeholder="Enter Free Fire UID"
-            required
-        >
+    <div class="cards">
 
-        <label for="mode">Select Tournament</label>
-        <select id="mode" name="mode" required>
-            <option value="">Choose your match</option>
-            <option value="BR SOLO">🔥 BR Solo — ₹10 Entry</option>
-            <option value="CLASH SQUAD">⚔️ Clash Squad — ₹10 Entry</option>
-            <option value="LONE WOLF 1v1">🐺 Lone Wolf — ₹20 Entry</option>
-        </select>
+        <article class="card">
+            <div class="card-icon">👑</div>
+            <h3>BR SOLO</h3>
+            <p>Battle Royale • Solo Match</p>
 
-        <button type="submit">REGISTER VIA WHATSAPP 📲</button>
+            <div class="price">₹10 <small>/ player</small></div>
 
-    </form>
+            <ul>
+                <li>Two matches every day</li>
+                <li>3:00 PM and 3:30 PM</li>
+                <li>Booyah winner gets ₹100</li>
+                <li>₹3 per kill</li>
+                <li>No second or third prize</li>
+            </ul>
 
-    <p class="note">
-        WhatsApp khulne par message check karke Send dabao.
-        Registration confirm karne ke liye organizer ka reply zaroori hai.
-    </p>
+            <button type="button" class="btn choose-btn"
+                data-mode="BR Solo">
+                SELECT BR SOLO
+            </button>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">⚔️</div>
+            <h3>CLASH SQUAD</h3>
+            <p>Team Battle • Clash Squad</p>
+
+            <div class="price">₹10 <small>/ player</small></div>
+
+            <ul>
+                <li>Two matches every day</li>
+                <li>4:00 PM and 4:30 PM</li>
+                <li>₹60 prize pool per match</li>
+                <li>Team up and compete</li>
+                <li>Confirm team rules with organizer</li>
+            </ul>
+
+            <button type="button" class="btn choose-btn"
+                data-mode="Clash Squad">
+                SELECT CLASH SQUAD
+            </button>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">🔥</div>
+            <h3>LONE WOLF 1v1</h3>
+            <p>One versus One • Head-to-Head</p>
+
+            <div class="price">₹20 <small>/ player</small></div>
+
+            <ul>
+                <li>5:00 PM</li>
+                <li>5:10 PM</li>
+                <li>5:20 PM</li>
+                <li>5:30 PM</li>
+                <li>5:40 PM</li>
+                <li>Winner gets ₹30</li>
+            </ul>
+
+            <button type="button" class="btn choose-btn"
+                data-mode="Lone Wolf 1v1">
+                SELECT LONE WOLF
+            </button>
+        </article>
+
+    </div>
+</section>
+
+<section class="schedule" id="schedule">
+    <div class="section-title">
+        <h2>📅 DAILY MATCH SCHEDULE</h2>
+        <p>Choose your exact match time in the registration form.</p>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>GAME MODE</th>
+                    <th>MATCH</th>
+                    <th>TIME</th>
+                    <th>ENTRY</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>BR Solo</td>
+                    <td>Match 1</td>
+                    <td>3:00 PM</td>
+                    <td>₹10</td>
+                </tr>
+                <tr>
+                    <td>BR Solo</td>
+                    <td>Match 2</td>
+                    <td>3:30 PM</td>
+                    <td>₹10</td>
+                </tr>
+                <tr>
+                    <td>Clash Squad</td>
+                    <td>Match 1</td>
+                    <td>4:00 PM</td>
+                    <td>₹10/player</td>
+                </tr>
+                <tr>
+                    <td>Clash Squad</td>
+                    <td>Match 2</td>
+                    <td>4:30 PM</td>
+                    <td>₹10/player</td>
+                </tr>
+                <tr>
+                    <td>Lone Wolf 1v1</td>
+                    <td>Match 1</td>
+                    <td>5:00 PM</td>
+                    <td>₹20</td>
+                </tr>
+                <tr>
+                    <td>Lone Wolf 1v1</td>
+                    <td>Match 2</td>
+                    <td>5:10 PM</td>
+                    <td>₹20</td>
+                </tr>
+                <tr>
+                    <td>Lone Wolf 1v1</td>
+                    <td>Match 3</td>
+                    <td>5:20 PM</td>
+                    <td>₹20</td>
+                </tr>
+                <tr>
+                    <td>Lone Wolf 1v1</td>
+                    <td>Match 4</td>
+                    <td>5:30 PM</td>
+                    <td>₹20</td>
+                </tr>
+                <tr>
+                    <td>Lone Wolf 1v1</td>
+                    <td>Match 5</td>
+                    <td>5:40 PM</td>
+                    <td>₹20</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="register-section" id="register">
+    <div class="section-title">
+        <h2>📝 PLAYER REGISTRATION</h2>
+        <p>Select the exact match you want to play.</p>
+    </div>
+
+    <div class="form-box">
+        <h3>JOIN THE BATTLE</h3>
+        <p>ROLEX TOURNAMENT • Registration Form</p>
+
+        <form id="registrationForm">
+
+            <label for="playerName">Player Name</label>
+            <input
+                type="text"
+                id="playerName"
+                placeholder="Enter your player name"
+                maxlength="40"
+                required
+            >
+
+            <label for="playerUID">Free Fire UID</label>
+            <input
+                type="text"
+                id="playerUID"
+                placeholder="Enter your Free Fire UID"
+                inputmode="numeric"
+                maxlength="25"
+                required
+            >
+
+            <label for="tournament">Select Tournament</label>
+            <select id="tournament" required>
+                <option value="">-- Choose Tournament --</option>
+                <option value="BR Solo">BR Solo — ₹10</option>
+                <option value="Clash Squad">Clash Squad — ₹10/player</option>
+                <option value="Lone Wolf 1v1">Lone Wolf 1v1 — ₹20</option>
+            </select>
+
+            <label for="matchTime">Select Match Time</label>
+            <select id="matchTime" required disabled>
+                <option value="">-- Select tournament first --</option>
+            </select>
+
+            <p class="helper" id="matchHelp">
+                Choose a tournament first to see available match timings.
+            </p>
+
+            <div id="matchSummary" class="notice" hidden></div>
+
+            <button type="submit" class="btn">
+                📲 REGISTER VIA WHATSAPP
+            </button>
+
+        </form>
+
+        <div class="notice">
+            🔒 Your own mobile number is not requested.
+            WhatsApp will open with your registration details.
+            Review the message and press Send to contact the organizer.
+        </div>
+    </div>
+</section>
+
+<section id="rules">
+    <div class="section-title">
+        <h2>📜 TOURNAMENT RULES</h2>
+        <p>Important information before registration.</p>
+    </div>
+
+    <div class="rules">
+        <div class="rule">
+            <strong>01. Correct Details:</strong>
+            Enter your correct player name and Free Fire UID.
+        </div>
+
+        <div class="rule">
+            <strong>02. Select Match Time:</strong>
+            Choose one of the available times for your selected tournament.
+        </div>
+
+        <div class="rule">
+            <strong>03. Confirmation:</strong>
+            WhatsApp registration is a request, not automatic confirmation.
+            Wait for the organizer to confirm your slot.
+        </div>
+
+        <div class="rule">
+            <strong>04. Prize Details:</strong>
+            Confirm the prize rules and match instructions with the organizer.
+        </div>
+
+        <div class="rule">
+            <strong>05. Fair Play:</strong>
+            Cheating or hacking may result in disqualification.
+        </div>
+
+        <div class="rule">
+            <strong>06. Entry Fee:</strong>
+            Confirm the slot and payment instructions before paying.
+        </div>
+    </div>
 </section>
 
 </main>
 
 <footer>
-    <p>© 2026 <strong>ROLEX TOURNAMENT</strong></p>
-    <p style="margin-top:8px">FREE FIRE MAX • PLAY TO WIN</p>
+    <p>© <span id="year"></span> <strong>ROLEX TOURNAMENT</strong></p>
+    <p>Free Fire MAX Community Tournament</p>
+    <p>Play Fair • Respect Players • Enjoy the Game</p>
 </footer>
 
+<a
+    class="whatsapp-float"
+    href="https://wa.me/919359028872?text=Hello%20ROLEX%20TOURNAMENT"
+    target="_blank"
+    rel="noopener noreferrer"
+>💬 Contact Organizer</a>
+
 <script>
-document.getElementById("registrationForm").addEventListener("submit", function(event) {
+const ORGANIZER_WHATSAPP = "919359028872";
+
+const tournamentDetails = {
+    "BR Solo": {
+        fee: "₹10 per player",
+        prize: "Booyah winner ₹100 + ₹3 per kill",
+        times: ["3:00 PM", "3:30 PM"]
+    },
+
+    "Clash Squad": {
+        fee: "₹10 per player",
+        prize: "₹60 prize pool per match",
+        times: ["4:00 PM", "4:30 PM"]
+    },
+
+    "Lone Wolf 1v1": {
+        fee: "₹20 per player",
+        prize: "Winner gets ₹30",
+        times: [
+            "5:00 PM",
+            "5:10 PM",
+            "5:20 PM",
+            "5:30 PM",
+            "5:40 PM"
+        ]
+    }
+};
+
+const tournamentSelect = document.getElementById("tournament");
+const timeSelect = document.getElementById("matchTime");
+const matchHelp = document.getElementById("matchHelp");
+const matchSummary = document.getElementById("matchSummary");
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+/*
+  Update available match times whenever the tournament changes.
+*/
+function updateMatchTimes() {
+    const selectedTournament = tournamentSelect.value;
+
+    timeSelect.innerHTML = "";
+    matchSummary.hidden = true;
+
+    if (!selectedTournament || !tournamentDetails[selectedTournament]) {
+        timeSelect.disabled = true;
+
+        const option = document.createElement("option");
+        option.value = "";
+        option.textContent = "-- Select tournament first --";
+        timeSelect.appendChild(option);
+
+        matchHelp.textContent =
+            "Choose a tournament first to see available match timings.";
+
+        return;
+    }
+
+    const details = tournamentDetails[selectedTournament];
+
+    timeSelect.disabled = false;
+
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "-- Choose your match time --";
+    timeSelect.appendChild(placeholder);
+
+    details.times.forEach(function(time) {
+        const option = document.createElement("option");
+        option.value = time;
+        option.textContent = time;
+        timeSelect.appendChild(option);
+    });
+
+    matchHelp.textContent =
+        "Available times for " + selectedTournament + ".";
+
+    updateMatchSummary();
+}
+
+function updateMatchSummary() {
+    const selectedTournament = tournamentSelect.value;
+    const selectedTime = timeSelect.value;
+
+    if (!selectedTournament || !selectedTime) {
+        matchSummary.hidden = true;
+        return;
+    }
+
+    const details = tournamentDetails[selectedTournament];
+
+    matchSummary.textContent =
+        "🏆 " + selectedTournament +
+        " | 🕒 " + selectedTime +
+        " | 💰 Entry: " + details.fee;
+
+    matchSummary.hidden = false;
+}
+
+tournamentSelect.addEventListener("change", updateMatchTimes);
+timeSelect.addEventListener("change", updateMatchSummary);
+
+/*
+  Clicking a tournament card selects that tournament
+  and scrolls to the registration form.
+*/
+document.querySelectorAll(".choose-btn").forEach(function(button) {
+    button.addEventListener("click", function() {
+        tournamentSelect.value = button.dataset.mode;
+        updateMatchTimes();
+
+        document.getElementById("register").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+
+/*
+  Registration opens WhatsApp with the chosen match time.
+  The player must press Send in WhatsApp.
+*/
+document.getElementById("registrationForm")
+.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const player = document.getElementById("player").value.trim();
-    const uid = document.getElementById("uid").value.trim();
-    const mode = document.getElementById("mode").value;
+    const playerName =
+        document.getElementById("playerName").value.trim();
 
-    const fees = {
-        "BR SOLO": "₹10 per player",
-        "CLASH SQUAD": "₹10 per player",
-        "LONE WOLF 1v1": "₹20 per player"
-    };
+    const playerUID =
+        document.getElementById("playerUID").value.trim();
+
+    const tournament = tournamentSelect.value;
+    const selectedTime = timeSelect.value;
+
+    if (!playerName || !playerUID || !tournament || !selectedTime) {
+        alert("Please fill in all fields and select a match time.");
+        return;
+    }
+
+    const details = tournamentDetails[tournament];
 
     const message =
-        "👑 ROLEX TOURNAMENT REGISTRATION\n\n" +
-        "👤 Player Name: " + player + "\n" +
-        "🎮 Free Fire UID: " + uid + "\n" +
-        "🏆 Tournament: " + mode + "\n" +
-        "💰 Entry Fee: " + fees[mode] + "\n\n" +
-        "📅 MATCH SCHEDULE\n" +
-        "BR Solo: 3:00 PM, 3:30 PM\n" +
-        "Clash Squad: 4:00 PM, 4:30 PM\n" +
-        "Lone Wolf: 5:00 PM, 5:10 PM, 5:20 PM, 5:30 PM, 5:40 PM\n\n" +
-        "Please confirm my registration.";
+`🎮 ROLEX TOURNAMENT REGISTRATION
 
-    const organizerNumber = "919359028872";
+👤 Player Name: ${playerName}
+🆔 Free Fire UID: ${playerUID}
+🏆 Tournament: ${tournament}
+🕒 Selected Match Time: ${selectedTime}
+💰 Entry Fee: ${details.fee}
+🎁 Prize Details: ${details.prize}
+
+Please confirm my selected match slot and share the match instructions.
+
+Thank you!
+- ROLEX TOURNAMENT`;
 
     const whatsappURL =
-        "https://wa.me/" + organizerNumber +
+        "https://wa.me/" + ORGANIZER_WHATSAPP +
         "?text=" + encodeURIComponent(message);
 
     window.location.href = whatsappURL;
