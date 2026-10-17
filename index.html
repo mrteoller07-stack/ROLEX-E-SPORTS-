@@ -6,187 +6,144 @@
 <title>ROLEX TOURNAMENT</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#070b08;
+    color:white;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #070b08;
-    color: white;
+header{
+    text-align:center;
+    padding:30px 15px;
+    background:linear-gradient(135deg,#18251a,#000);
+    border-bottom:2px solid #d4af37;
 }
 
-header {
-    text-align: center;
-    padding: 30px 15px;
-    background: linear-gradient(135deg, #18251a, #000);
-    border-bottom: 2px solid #d4af37;
+.logo{
+    font-size:38px;
+    font-weight:900;
+    color:#d4af37;
+    letter-spacing:5px;
 }
 
-.logo {
-    font-size: 38px;
-    font-weight: 900;
-    color: #d4af37;
-    letter-spacing: 5px;
+header p{margin-top:10px;color:#ddd}
+
+.badge{
+    display:inline-block;
+    margin-top:15px;
+    background:#d4af37;
+    color:#000;
+    padding:9px 16px;
+    border-radius:25px;
+    font-weight:bold;
 }
 
-header p {
-    margin-top: 10px;
-    color: #ddd;
+.container{
+    width:92%;
+    max-width:800px;
+    margin:25px auto;
 }
 
-.badge {
-    display: inline-block;
-    margin-top: 15px;
-    background: #d4af37;
-    color: #000;
-    padding: 9px 16px;
-    border-radius: 25px;
-    font-weight: bold;
+.heading{
+    text-align:center;
+    color:#d4af37;
+    margin:30px 0 20px;
 }
 
-.container {
-    width: 92%;
-    max-width: 800px;
-    margin: 25px auto;
+.card{
+    background:#111813;
+    border:1px solid #354638;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:22px;
+    box-shadow:0 5px 20px #0008;
 }
 
-.heading {
-    text-align: center;
-    color: #d4af37;
-    margin: 30px 0 20px;
+.card h2{color:#d4af37;margin-bottom:15px}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    padding:12px 0;
+    border-bottom:1px solid #29352c;
 }
 
-.card {
-    background: #111813;
-    border: 1px solid #354638;
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 22px;
-    box-shadow: 0 5px 20px #0008;
+.info span{color:#bbb}
+.info strong{color:white;text-align:right}
+
+.prize{
+    background:#1c281e;
+    border-radius:10px;
+    padding:13px;
+    margin-top:10px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
 }
 
-.card h2 {
-    color: #d4af37;
-    margin-bottom: 15px;
+.prize strong{color:#d4af37}
+
+form{display:grid;gap:13px;margin-top:18px}
+
+label{color:#ddd;font-size:14px}
+
+input,select{
+    width:100%;
+    padding:14px;
+    border-radius:8px;
+    font-size:15px;
+    background:#080d09;
+    color:white;
+    border:1px solid #435447;
 }
 
-.info {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 12px 0;
-    border-bottom: 1px solid #29352c;
+select option{background:#111813}
+
+button{
+    width:100%;
+    padding:15px;
+    border-radius:8px;
+    background:#d4af37;
+    color:#000;
+    border:none;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.info span {
-    color: #bbb;
+button:hover{background:#f2d568}
+
+.note{
+    font-size:12px;
+    color:#aaa;
+    line-height:1.6;
+    margin-top:12px;
 }
 
-.info strong {
-    color: white;
-    text-align: right;
+.schedule-title{
+    color:#d4af37;
+    margin-top:23px;
+    margin-bottom:5px;
 }
 
-.prize {
-    background: #1c281e;
-    border-radius: 10px;
-    padding: 13px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+footer{
+    text-align:center;
+    padding:25px 12px;
+    margin-top:35px;
+    background:#101610;
+    color:#aaa;
+    border-top:1px solid #354638;
 }
 
-.prize strong {
-    color: #d4af37;
-}
+footer strong{color:#d4af37}
 
-form {
-    display: grid;
-    gap: 13px;
-    margin-top: 18px;
-}
-
-label {
-    color: #ddd;
-    font-size: 14px;
-    margin-bottom: -7px;
-}
-
-input, select {
-    width: 100%;
-    padding: 14px;
-    border-radius: 8px;
-    font-size: 15px;
-    background: #080d09;
-    color: white;
-    border: 1px solid #435447;
-}
-
-select option {
-    background: #111813;
-}
-
-button, .whatsapp {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border-radius: 8px;
-    background: #d4af37;
-    color: #000;
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-}
-
-button:hover {
-    background: #f2d568;
-}
-
-.note {
-    font-size: 12px;
-    color: #aaa;
-    line-height: 1.6;
-    margin-top: 12px;
-}
-
-.schedule-title {
-    color: #d4af37;
-    margin-top: 23px;
-    margin-bottom: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 25px 12px;
-    margin-top: 35px;
-    background: #101610;
-    color: #aaa;
-    border-top: 1px solid #354638;
-}
-
-footer strong {
-    color: #d4af37;
-}
-
-@media(max-width:450px) {
-    .logo {
-        font-size: 30px;
-    }
-
-    .card {
-        padding: 16px;
-    }
-
-    .info {
-        font-size: 14px;
-    }
+@media(max-width:450px){
+    .logo{font-size:30px}
+    .card{padding:16px}
+    .info{font-size:14px}
 }
 </style>
 </head>
@@ -203,7 +160,6 @@ footer strong {
 
 <h1 class="heading">🏆 TOURNAMENT ARENA</h1>
 
-<!-- BR SOLO -->
 <section class="card">
     <h2>🔥 BR SOLO</h2>
 
@@ -228,7 +184,6 @@ footer strong {
     </div>
 </section>
 
-<!-- CLASH SQUAD -->
 <section class="card">
     <h2>⚔️ CLASH SQUAD</h2>
 
@@ -248,7 +203,6 @@ footer strong {
     </div>
 </section>
 
-<!-- LONE WOLF -->
 <section class="card">
     <h2>🐺 LONE WOLF 1v1</h2>
 
@@ -268,69 +222,32 @@ footer strong {
     </div>
 </section>
 
-<!-- MATCH SCHEDULE -->
 <section class="card">
     <h2>📅 OFFICIAL MATCH SCHEDULE</h2>
     <p class="note">DAILY MATCH TIMINGS • INDIA TIME (IST)</p>
 
     <h3 class="schedule-title">🔥 BR SOLO</h3>
-
-    <div class="info">
-        <span>Match 1</span>
-        <strong>3:00 PM</strong>
-    </div>
-
-    <div class="info">
-        <span>Match 2</span>
-        <strong>3:30 PM</strong>
-    </div>
+    <div class="info"><span>Match 1</span><strong>3:00 PM</strong></div>
+    <div class="info"><span>Match 2</span><strong>3:30 PM</strong></div>
 
     <h3 class="schedule-title">⚔️ CLASH SQUAD</h3>
-
-    <div class="info">
-        <span>Match 1</span>
-        <strong>4:00 PM</strong>
-    </div>
-
-    <div class="info">
-        <span>Match 2</span>
-        <strong>4:30 PM</strong>
-    </div>
+    <div class="info"><span>Match 1</span><strong>4:00 PM</strong></div>
+    <div class="info"><span>Match 2</span><strong>4:30 PM</strong></div>
 
     <h3 class="schedule-title">🐺 LONE WOLF 1v1</h3>
-
-    <div class="info">
-        <span>Match 1</span>
-        <strong>5:00 PM</strong>
-    </div>
-
-    <div class="info">
-        <span>Match 2</span>
-        <strong>5:10 PM</strong>
-    </div>
-
-    <div class="info">
-        <span>Match 3</span>
-        <strong>5:20 PM</strong>
-    </div>
-
-    <div class="info">
-        <span>Match 4</span>
-        <strong>5:30 PM</strong>
-    </div>
-
-    <div class="info">
-        <span>Match 5</span>
-        <strong>5:40 PM</strong>
-    </div>
+    <div class="info"><span>Match 1</span><strong>5:00 PM</strong></div>
+    <div class="info"><span>Match 2</span><strong>5:10 PM</strong></div>
+    <div class="info"><span>Match 3</span><strong>5:20 PM</strong></div>
+    <div class="info"><span>Match 4</span><strong>5:30 PM</strong></div>
+    <div class="info"><span>Match 5</span><strong>5:40 PM</strong></div>
 </section>
 
-<!-- WHATSAPP REGISTRATION -->
 <section class="card">
     <h2>📲 REGISTER FOR ROLEX</h2>
 
     <p class="note">
-        Form bharo aur WhatsApp par apni registration request bhejo.
+        Apna Player Name, Free Fire UID aur Tournament select karo.
+        Registration request WhatsApp par bhejo.
     </p>
 
     <form id="registrationForm">
@@ -340,7 +257,7 @@ footer strong {
             id="player"
             name="player"
             type="text"
-            placeholder="Enter your player name"
+            placeholder="Enter Player Name"
             required
         >
 
@@ -350,19 +267,7 @@ footer strong {
             name="uid"
             type="text"
             inputmode="numeric"
-            placeholder="Enter your Free Fire UID"
-            required
-        >
-
-        <label for="mobile">Your WhatsApp Number</label>
-        <input
-            id="mobile"
-            name="mobile"
-            type="tel"
-            inputmode="numeric"
-            placeholder="Enter your mobile number"
-            pattern="[0-9]{10}"
-            maxlength="10"
+            placeholder="Enter Free Fire UID"
             required
         >
 
@@ -375,12 +280,12 @@ footer strong {
         </select>
 
         <button type="submit">REGISTER VIA WHATSAPP 📲</button>
+
     </form>
 
     <p class="note">
-        Registration request WhatsApp par khulegi.
-        Request bhejne ke liye WhatsApp mein Send dabana zaroori hai.
-        Registration confirm hone se pehle organizer se details verify karein.
+        WhatsApp khulne par message check karke Send dabao.
+        Registration confirm karne ke liye organizer ka reply zaroori hai.
     </p>
 </section>
 
@@ -397,29 +302,28 @@ document.getElementById("registrationForm").addEventListener("submit", function(
 
     const player = document.getElementById("player").value.trim();
     const uid = document.getElementById("uid").value.trim();
-    const mobile = document.getElementById("mobile").value.trim();
     const mode = document.getElementById("mode").value;
 
     const fees = {
-        "BR SOLO": "₹10",
+        "BR SOLO": "₹10 per player",
         "CLASH SQUAD": "₹10 per player",
-        "LONE WOLF 1v1": "₹20"
+        "LONE WOLF 1v1": "₹20 per player"
     };
 
     const message =
-        "👑 ROLEX TOURNAMENT - REGISTRATION REQUEST\n\n" +
+        "👑 ROLEX TOURNAMENT REGISTRATION\n\n" +
         "👤 Player Name: " + player + "\n" +
         "🎮 Free Fire UID: " + uid + "\n" +
-        "📱 Player Mobile: " + mobile + "\n" +
         "🏆 Tournament: " + mode + "\n" +
-        "💰 Listed Entry Fee: " + fees[mode] + "\n\n" +
-        "📅 DAILY MATCH SCHEDULE\n" +
+        "💰 Entry Fee: " + fees[mode] + "\n\n" +
+        "📅 MATCH SCHEDULE\n" +
         "BR Solo: 3:00 PM, 3:30 PM\n" +
         "Clash Squad: 4:00 PM, 4:30 PM\n" +
         "Lone Wolf: 5:00 PM, 5:10 PM, 5:20 PM, 5:30 PM, 5:40 PM\n\n" +
-        "Please check and confirm my registration.";
+        "Please confirm my registration.";
 
     const organizerNumber = "919359028872";
+
     const whatsappURL =
         "https://wa.me/" + organizerNumber +
         "?text=" + encodeURIComponent(message);
